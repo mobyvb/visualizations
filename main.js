@@ -92,7 +92,7 @@ function drawCircles(offsetInner, offsetOuter) {
       y: height / 2
     };
     var currPercentage = i / circleResolution;
-    var currColor = colorWheel(255 * currPercentage);
+    var currColor = parseInt(360 * currPercentage);//colorWheel(255 * currPercentage);
     var currAngleInner = 2 * Math.PI * currPercentage + offsetInner;
     var currAngleOuter = 2 * Math.PI * currPercentage + offsetOuter;
     var nextInnerPoint = {
@@ -104,7 +104,7 @@ function drawCircles(offsetInner, offsetOuter) {
       y: center.y + Math.sin(currAngleOuter) * outerCircle.radius
     }
 
-    ctx.strokeStyle = 'rgb(' + currColor[0] + ',' + currColor[1] + ',' + currColor[2] + ')';
+    ctx.strokeStyle = 'hsl(' + currColor + ',100%, 50%)';
     ctx.beginPath();
     ctx.moveTo(nextInnerPoint.x, nextInnerPoint.y);
     ctx.lineTo(nextOuterPoint.x, nextOuterPoint.y);
