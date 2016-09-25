@@ -77,10 +77,7 @@ function updateImage() {
 
   innerCircle.radius = parseInt(radius1Control.value);
   outerCircle.radius = parseInt(radius2Control.value);
-  console.log(innerOffset);
-  console.log(outerOffset);
-  console.log(innerCircle.radius);
-  console.log(outerCircle.radius);
+
   drawCircles(innerOffset, outerOffset);
   window.requestAnimationFrame(function() {
     drawCircles(innerOffset, outerOffset);
