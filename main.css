@@ -5,3 +5,14 @@ body {
 canvas {
   margin: 20px 25px;
 }
+
+#controls {
+  padding: 25px;
+  position: fixed;
+  border: 1px solid black;
+  top: 10px;
+  left: 10px;
+}
+input {
+  display: block;
+}

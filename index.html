@@ -8,6 +8,17 @@
   </head>
   <body>
     <canvas id='maincanvas'></canvas>
+    <div id='controls'>
+      <label for='radius1'>Radius circle 1 (px)</label>
+      <input id='radius1' type='range' name='radius1' min='1' max='500' value='50' onchange='updateImage()' oninput='updateImage()'>
+      <label for='radius2'>Radius circle 2 (px)</label>
+      <input id='radius2' type='range' name='radius2' min='1' max='500' value='150' onchange='updateImage()' oninput='updateImage()'>
+
+      <label for='offset1'>Offset circle 1 (%)</label>
+      <input id='offset1' type='range' name='offset1' min='0' max='100' value='0' onchange='updateImage()' oninput='updateImage()'>
+      <label for='offset2'>Offset circle 2 (px)</label>
+      <input id='offset2' type='range' name='offset2' min='0' max='100' value='0' onchange='updateImage()' oninput='updateImage()'>
+    </div>
     <script src='./main.js'></script>
   </body>
 </html>
